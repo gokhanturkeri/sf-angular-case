@@ -1,0 +1,6 @@
+<div class="category-buttons-heading">Categories</div>
+<div class="category-buttons category-button-container">
+  <button class="category-button" *ngFor="let category of categories" (click)="selectCategory(category)">
+    {{ category.name }}
+  </button>
+</div>

@@ -1,0 +1,23 @@
+<div class="basket">
+  <div class="basket-items">
+    <div class="basket-item header">
+      <div class="column-name">Name</div>
+      <div class="column-price">Price</div>
+      <div class="column-quantity">Quantity</div>
+      <div class="column-subtotal">Subtotal</div>
+    </div>
+    <div class="basket-item" *ngFor="let item of basketItems">
+      <div class="basket-item-name">{{ item.name }}</div>
+      <div class="basket-item-price">{{ item.price }}</div>
+      <div class="basket-item-quantity">
+        <!-- <button class="quantity-control" (click)="decrementQuantity(item)">-</button> -->
+        {{ item.quantity }}
+        <!-- <button class="quantity-control" (click)="incrementQuantity(item)">+</button> -->
+      </div>
+      <div class="basket-item-subtotal">{{ item.price * item.quantity }}</div>
+    </div>
+  </div>
+  <div class="basket-footer">
+    <div class="total-price">Total: <span class="price">{{ getTotalPrice() }}</span> ₺</div>
+  </div>
+</div>

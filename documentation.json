@@ -1,0 +1,1197 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [
+        {
+            "name": "DataService",
+            "id": "injectable-DataService-61f568a9fb3eaa946167158a842c02cb1c13924bab04db512c67b5f5aa979690156556215a4155aa976041145177d5cf54b692297e26bda32bd65ab4b567e6e8",
+            "file": "src/app/data.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getCategories",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { Observable } from 'rxjs';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class DataService {\n\n  constructor(private http: HttpClient) { }\n  getCategories(): Observable<any> {\n    return this.http.get<any>('assets/data.json');\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 8,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-6f5feb0749cbdb61663631c4c67212335e94350338bfe2802813288b4b39864eb9f3c436476d69dd10bf9f24a9955f7eb2d47a0ac729b0e1199e78e0c7e5b792",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'Your Angular Shopping App'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "HomeModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { HomeComponent } from './home/home.component';\nimport { HomeModule } from './home/home.module';\n\n@Component({\n  standalone: true,\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css'],\n  imports: [HomeModule]\n})\nexport class AppComponent {\n  title = 'Your Angular Shopping App';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<app-home></app-home>"
+        },
+        {
+            "name": "BasketComponent",
+            "id": "component-BasketComponent-4094365a9d8bf6e286f211825ae255e5fb6e8282ec2ee11878fa86ea026b31a0679d902bf2fd9d5108267a06c0cf915d40571bd6f22798f99ba74e5cbd3ef985",
+            "file": "src/app/basket/basket.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-basket",
+            "styleUrls": [
+                "./basket.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./basket.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "basketItems",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "any[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "decrementQuantity",
+                    "args": [
+                        {
+                            "name": "item",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "item",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getTotalPrice",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "incrementQuantity",
+                    "args": [
+                        {
+                            "name": "item",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "item",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-basket',\n  templateUrl: './basket.component.html',\n  styleUrls: ['./basket.component.css']\n})\nexport class BasketComponent {\n  @Input() basketItems: any[] = [];\n\n  getTotalPrice(): number {\n    return this.basketItems.reduce((total, item) => total + item.price * item.quantity, 0);\n  }\n\n  incrementQuantity(item: any) {\n    item.quantity++;\n  }\n\n  decrementQuantity(item: any) {\n    if (item.quantity > 1) {\n      item.quantity--;\n    }\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* basket.component.css */\n\n.basket {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 20px;\n  background-color: #f8f9fa;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n}\n\n.basket-items {\n  margin-bottom: 20px;\n}\n\n.basket-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 0px solid #ddd;\n  padding: 10px 0;\n  border-radius: 5px;\n}\n\n.basket-item.header {\n  font-weight: bold;\n  background-color: #454140;\n  border-radius: 8px;\n}\n\n.column-price,\n.column-quantity,\n.column-subtotal,\n.column-name {\n  flex: 1;\n  text-align: center;\n  color: #fff;\n  font-weight: bold;\n  font-size: 24px;\n}\n\n.basket-item-name,\n.basket-item-price,\n.basket-item-quantity,\n.basket-item-subtotal {\n  flex: 1;\n  text-align: center;\n  color: #454140;\n  font-weight: bold;\n  font-size: 24px;\n}\n\n/* .quantity-control {\n  background-color: #007bff;\n  color: #fff;\n  border: none;\n  border-radius: 50%;\n  width: 30px;\n  height: 30px;\n  cursor: pointer;\n  font-size: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n} */\n\n.quantity {\n  margin: 0 10px;\n  font-size: 16px;\n}\n\n.basket-footer {\n  margin-top: auto;\n}\n\n.total-price {\n  font-size: 24px;\n  font-weight: bold;\n  color: #007bff;\n  text-align: center;\n}\n\n.total-price .price {\n  font-size: 30px;\n}\n",
+                    "styleUrl": "./basket.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"basket\">\n  <div class=\"basket-items\">\n    <div class=\"basket-item header\">\n      <div class=\"column-name\">Name</div>\n      <div class=\"column-price\">Price</div>\n      <div class=\"column-quantity\">Quantity</div>\n      <div class=\"column-subtotal\">Subtotal</div>\n    </div>\n    <div class=\"basket-item\" *ngFor=\"let item of basketItems\">\n      <div class=\"basket-item-name\">{{ item.name }}</div>\n      <div class=\"basket-item-price\">{{ item.price }}</div>\n      <div class=\"basket-item-quantity\">\n        <!-- <button class=\"quantity-control\" (click)=\"decrementQuantity(item)\">-</button> -->\n        {{ item.quantity }}\n        <!-- <button class=\"quantity-control\" (click)=\"incrementQuantity(item)\">+</button> -->\n      </div>\n      <div class=\"basket-item-subtotal\">{{ item.price * item.quantity }}</div>\n    </div>\n  </div>\n  <div class=\"basket-footer\">\n    <div class=\"total-price\">Total: <span class=\"price\">{{ getTotalPrice() }}</span> ₺</div>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "CategoryButtonsComponent",
+            "id": "component-CategoryButtonsComponent-291b4e2ff2489a2c70c18a3463ce967e3c4b00969fa32168213108d5605bef96d50a2b3fe2d97d6e7dc6eb4671345b0127fefe62cdf1c0d0fe3d8dd5446f368d",
+            "file": "src/app/category-buttons/category-buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-category-buttons",
+            "styleUrls": [
+                "./category-buttons.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./category-buttons.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "categories",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "any[] | undefined",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "categorySelected",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "selectCategory",
+                    "args": [
+                        {
+                            "name": "category",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "category",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-category-buttons',\n  templateUrl: './category-buttons.component.html',\n  styleUrls: ['./category-buttons.component.css']\n})\nexport class CategoryButtonsComponent {\n  @Input() categories: any[] | undefined;\n  @Output() categorySelected = new EventEmitter<any>();\n\n  selectCategory(category: any) {\n    this.categorySelected.emit(category);\n  }\n  \n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* category-buttons.component.css */\n\n.category-buttons {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.category-buttons-heading {\n  background-color: #454140;\n  color: #fff;\n  padding: 20px;\n  border-radius: 5px;\n  margin-bottom: 10px;\n  font-size: 24px;\n  text-align: center;\n}\n\n.category-button-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 10px;\n}\n\n.category-button {\n  width: 100%;\n  padding: 15px;\n  font-size: 20px;\n  background-color: #e0e0e0;\n  color: #000;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n}\n\n.category-button:hover {\n  background-color: #ccc;\n}\n",
+                    "styleUrl": "./category-buttons.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"category-buttons-heading\">Categories</div>\n<div class=\"category-buttons category-button-container\">\n  <button class=\"category-button\" *ngFor=\"let category of categories\" (click)=\"selectCategory(category)\">\n    {{ category.name }}\n  </button>\n</div>\n"
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-f896f8f80f1a67d0fc3e038894295f27d8beef843dc4c810acb50382451b74617bcac081d13f9c0eb143176cc49e8bd2ef0e27cd47e9d83a27862485707bc828",
+            "file": "src/app/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [
+                "./home.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "basketItems",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "categories",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any[] | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "selectedCategory",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onCategorySelected",
+                    "args": [
+                        {
+                            "name": "category",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "category",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { DataService } from '../data.service';\n\n@Component({\n  selector: 'app-home',\n  templateUrl: './home.component.html',\n  styleUrls: ['./home.component.css']\n})\nexport class HomeComponent implements OnInit {\n  categories: any[] | undefined;\n  selectedCategory: any;\n  basketItems: any[] = [];\n\n  constructor(private dataService: DataService) {}\n\n  ngOnInit() {\n    this.dataService.getCategories().subscribe(data => {\n      this.categories = data.categories;\n    });\n  }\n\n  onCategorySelected(category: any) {\n    this.selectedCategory = category;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".home-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: stretch;\n  padding: 2.5% 2.5% 2.5% 2.5%;\n  height: 80vh;\n}\n\n.home-container > * {\n  margin-right: 2.5%;\n}\n\n.category-buttons {\n  width: 10%;\n}\n\n.product-cards, .basket {\n  width: 40%;\n}\n\n.home-container > :last-child {\n  margin-right: 0;\n}\n\n@media screen and (max-width: 1000px) {\n  .home-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n  }\n  \n  .product-cards, .category-buttons, .basket {\n    width: 100%;\n    margin-bottom: 2.5%;\n  }\n  \n}\n\n@media screen and (min-width: 1000px) and (max-width: 1500px) {\n  .home-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n  }\n  \n  .product-cards, .category-buttons, .basket {\n    width: 50%;\n    margin-bottom: 2.5%;\n  }\n  \n}",
+                    "styleUrl": "./home.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dataService",
+                        "type": "DataService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "dataService",
+                        "type": "DataService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"home-container\">\n    <app-basket class= \"basket\" [basketItems]=\"basketItems\"></app-basket>\n    <app-product-cards class = \"product-cards\" [selectedCategory]=\"selectedCategory\" [basketItems]=\"basketItems\"></app-product-cards>\n    <app-category-buttons class = \"category-buttons\" [categories]=\"categories\" (categorySelected)=\"onCategorySelected($event)\"></app-category-buttons>\n  </div>"
+        },
+        {
+            "name": "ProductCardsComponent",
+            "id": "component-ProductCardsComponent-ada482c65b7056ff0d80e73a723436b0fb17a4faf7603a16241152cd7ac70488d2b4f66988f8d7add55504d5f3e6d856a39a0b5025832ce93ffd5cf4ab9485b9",
+            "file": "src/app/product-cards/product-cards.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-product-cards",
+            "styleUrls": [
+                "./product-cards.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./product-cards.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "basketItems",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "any[]",
+                    "decorators": []
+                },
+                {
+                    "name": "selectedCategory",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "addToBasket",
+                    "args": [
+                        {
+                            "name": "product",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "product",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "removeFromBasket",
+                    "args": [
+                        {
+                            "name": "product",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "product",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-product-cards',\n  templateUrl: './product-cards.component.html',\n  styleUrls: ['./product-cards.component.css']\n})\nexport class ProductCardsComponent {\n  @Input() selectedCategory: any;\n  @Input() basketItems: any[] = [];\n\n  constructor() { }\n\n  addToBasket(product: any) {\n    const index = this.basketItems.findIndex(item => item.id == product.id);\n    if (index !== -1) {\n      this.basketItems[index].quantity++;\n    } else {\n      this.basketItems.push({ ...product, quantity: 1 });\n    }\n  }\n\n  removeFromBasket(product: any) {\n    const index = this.basketItems.findIndex(item => item.id == product.id);\n    if (index !== -1) {\n      if (this.basketItems[index].quantity == 1)\n        this.basketItems.splice(index, 1);\n      else\n        this.basketItems[index].quantity--;\n    } \n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".product-cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\n}\n\n.product-card {\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  overflow: hidden;\n  background-color: #e0e0e0;\n  color: #454140;\n  margin: 10px;\n}\n\n.product-info {\n  padding: 10px;\n  text-align: center;\n  font-size: 18px;\n  border-radius: 5px;\n}\n\n.product-actions {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #f8f9fa;\n}\n\n.action-button-add {\n  background-color: #fff;\n  color: green;\n  border: none;\n  border-radius: 5px;\n  width: 50%;\n  height: 40px;\n  cursor: pointer;\n  font-size: 16px;\n  margin: 5px;\n}\n\n.action-button-remove {\n  background-color: #fff;\n  color: red;\n  border: none;\n  border-radius: 5px;\n  width: 50%;\n  height: 40px;\n  cursor: pointer;\n  font-size: 16px;\n  margin: 5px;\n}\n\n.product-name {\n  font-weight: bold;\n}\n\n.product-price {\n  color: red;\n}\n",
+                    "styleUrl": "./product-cards.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "extends": [],
+            "templateData": "<ul *ngIf=\"selectedCategory\" class=\"product-cards\">\n      <li class=\"product-card\" *ngFor=\"let product of selectedCategory.products\">\n          <div class=\"product-info\">\n              <div class=\"product-price\">{{ product.price }} ₺</div>\n              <div class=\"product-name\">{{ product.name }}</div>\n          </div>\n          <div class=\"product-actions\">\n              <button class=\"action-button-add\" (click)=\"addToBasket(product)\">+</button>\n              <button class=\"action-button-remove\" (click)=\"removeFromBasket(product)\">-</button>\n          </div>\n        </li>\n</ul>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-1de19b8025ae416424f50c7f209605d23ebab844c39d1950c2ee6d67a40de4133da18b6936edddbf63215b8f3935bbe89baca64b8db57830eeac1736a9edb151",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "\nimport { NgModule } from \"@angular/core\";\nimport { HomeModule } from \"./home/home.module\";\nimport { BrowserModule } from \"@angular/platform-browser\";\nimport { HttpClientModule } from \"@angular/common/http\";\nimport { AppRoutingModule } from \"./app-routing.module\";\nimport { AppComponent } from \"./app.component\";\n\n@NgModule({\n  imports: [\n    HomeModule,\n    BrowserModule,\n    HttpClientModule,\n    AppRoutingModule\n  ],\n  providers: [HttpClientModule]\n\n})\n\nexport class AppModule {}",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "HomeModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-0888c6be416e8e29eaf29cfb5609bac730aedd705fb6368447592598683b4ad573dbfd198da6501a43f9cf63825ef4d53594f2ca9ea51a7e5d8792ee82e459f5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { routes } from './app.routes';\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BasketModule",
+            "id": "module-BasketModule-f80c0fd181c652f484f0f53f32528ce9e05590639261d5251f947572427f114f078966745e619d8d94c96f2d53fb460b8378fa4121009316dbc3c44759dff251",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/basket/basket.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from \"@angular/core\";\nimport { BasketComponent } from \"./basket.component\";\nimport { CommonModule } from \"@angular/common\";\n\n\n@NgModule({\n    imports: [CommonModule],\n    exports: [BasketComponent],\n    declarations: [BasketComponent],\n    providers: [],\n})\n\nexport class BasketModule{\n    \n}",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "BasketComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "BasketComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "CategoryButtonsModule",
+            "id": "module-CategoryButtonsModule-2e114c29f3dc3a94632fc28fd90224e428f1f7d8670afc7c93de9a94b5bef2182a3c90f5d8938bb276f7edfa16a41a7353a0d440436ae924a4d6ee8a49bacd32",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/category-buttons/category-buttons.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from \"@angular/core\";\nimport { CategoryButtonsComponent } from \"./category-buttons.component\";\nimport { CommonModule } from \"@angular/common\";\n\n@NgModule({\n    imports: [CommonModule],\n    exports: [CategoryButtonsComponent],\n    declarations: [CategoryButtonsComponent],\n    providers: [],\n})\n\nexport class CategoryButtonsModule{\n    \n}",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "CategoryButtonsComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "CategoryButtonsComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "HomeModule",
+            "id": "module-HomeModule-fdaf9768fbaab511bab4cdd0f7ec39a031fc2d17f271536b2376a66e005293ae6c8a0a5c8b478b44826ca438e5919709363f722684f800436a1cb65ec1558ec3",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/home/home.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from \"@angular/core\";\nimport { HomeComponent } from \"./home.component\";\nimport { CategoryButtonsComponent } from \"../category-buttons/category-buttons.component\";\nimport { CategoryButtonsModule } from \"../category-buttons/category-buttons.module\";\nimport { ProductCardsModule } from \"../product-cards/product-cards.module\";\nimport { BasketModule } from \"../basket/basket.module\";\n\n@NgModule({\n    imports: [CategoryButtonsModule, ProductCardsModule, BasketModule],\n    exports: [HomeComponent],\n    declarations: [HomeComponent],\n    providers: [],\n})\n\nexport class HomeModule{\n    \n}",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "HomeComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "BasketModule"
+                        },
+                        {
+                            "name": "CategoryButtonsModule"
+                        },
+                        {
+                            "name": "ProductCardsModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "HomeComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ProductCardsModule",
+            "id": "module-ProductCardsModule-56ca2148b7b52537ff84bf78ab9080572fa8a609d0c603bcc64df9a64b776d242ca0bb884841c8ae66a481dc631a09d5a996e83ba48e187f59d67683c3863b25",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/product-cards/product-cards.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from \"@angular/core\";\nimport { ProductCardsComponent } from \"./product-cards.component\";\nimport { CommonModule } from \"@angular/common\";\n\n@NgModule({\n    imports: [CommonModule],\n    exports: [ProductCardsComponent],\n    declarations: [ProductCardsComponent],\n    providers: [],\n})\n\nexport class ProductCardsModule{\n    \n}",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ProductCardsComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ProductCardsComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\n  providers: [provideRouter(routes), provideClientHydration(), provideHttpClient()]\n}"
+            },
+            {
+                "name": "bootstrap",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/main.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => bootstrapApplication(AppComponent, config)"
+            },
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/basket.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\n  props: {\n    basketItems: [\n      { id: 1, name: 'Product 1', price: 10, quantity: 2 },\n      { id: 2, name: 'Product 2', price: 15, quantity: 1 },\n    ],\n  },\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/category-buttons.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\n  props: {\n    categories: [\n      { id: 1, name: 'Category 1' },\n      { id: 2, name: 'Category 2' },\n    ],\n  },\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/product-cards.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\n  props: {\n    selectedCategory: {\n      name: 'Category 1',\n      products: [\n        { id: 1, name: 'Product 1', price: 10 },\n        { id: 2, name: 'Product 2', price: 15 },\n      ],\n    },\n  },\n})"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "serverConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\n  providers: [\n    provideServerRendering()\n  ]\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\n  providers: [provideRouter(routes), provideClientHydration(), provideHttpClient()]\n}"
+                }
+            ],
+            "src/main.server.ts": [
+                {
+                    "name": "bootstrap",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/main.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => bootstrapApplication(AppComponent, config)"
+                }
+            ],
+            "src/app/app.config.server.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+                },
+                {
+                    "name": "serverConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\n  providers: [\n    provideServerRendering()\n  ]\n}"
+                }
+            ],
+            "src/stories/basket.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/basket.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\n  props: {\n    basketItems: [\n      { id: 1, name: 'Product 1', price: 10, quantity: 2 },\n      { id: 2, name: 'Product 2', price: 15, quantity: 1 },\n    ],\n  },\n})"
+                }
+            ],
+            "src/stories/category-buttons.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/category-buttons.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\n  props: {\n    categories: [\n      { id: 1, name: 'Category 1' },\n      { id: 2, name: 'Category 2' },\n    ],\n  },\n})"
+                }
+            ],
+            "src/stories/product-cards.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/product-cards.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\n  props: {\n    selectedCategory: {\n      name: 'Category 1',\n      products: [\n        { id: 1, name: 'Product 1', price: 10 },\n        { id: 2, name: 'Product 2', price: 15 },\n      ],\n    },\n  },\n})"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "serverConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/basket/basket.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BasketComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/category-buttons/category-buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CategoryButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/data.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "DataService",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/product-cards/product-cards.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProductCardsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/main.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "bootstrap",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/basket.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/category-buttons.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/product-cards.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

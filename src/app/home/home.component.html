@@ -1,0 +1,5 @@
+<div class="home-container">
+    <app-basket class= "basket" [basketItems]="basketItems"></app-basket>
+    <app-product-cards class = "product-cards" [selectedCategory]="selectedCategory" [basketItems]="basketItems"></app-product-cards>
+    <app-category-buttons class = "category-buttons" [categories]="categories" (categorySelected)="onCategorySelected($event)"></app-category-buttons>
+  </div>

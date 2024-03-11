@@ -1,0 +1,53 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 2.5% 2.5% 2.5% 2.5%;
+  height: 80vh;
+}
+
+.home-container > * {
+  margin-right: 2.5%;
+}
+
+.category-buttons {
+  width: 10%;
+}
+
+.product-cards, .basket {
+  width: 40%;
+}
+
+.home-container > :last-child {
+  margin-right: 0;
+}
+
+/* @media screen and (max-width: 500px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-cards, .category-buttons, .basket {
+    width: 100%;
+    margin-bottom: 2.5%;
+  }
+  
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-cards, .category-buttons, .basket {
+    width: 50%;
+    margin-bottom: 2.5%;
+  }
+  
+} */

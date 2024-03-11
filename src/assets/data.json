@@ -1,0 +1,52 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Burgerler",
+        "products": [
+          { "id": 1, "name": "Hamburger", "price": 100 },
+          { "id": 2, "name": "Tavuk Hamburger", "price": 150 },
+          { "id": 3, "name": "Vegan Hamburger", "price": 200 },
+          { "id": 4, "name": "Barbekü Hamburger", "price": 200 },
+          { "id": 5, "name": "Cheeseburger", "price": 100 }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Kebaplar",
+        "products": [
+          {  "id": 6, "name": "Adana Kebap", "price": 50 },
+          {  "id": 7, "name": "Urfa Kebap", "price": 50 },
+          {  "id": 8, "name": "Ali Nazik", "price": 100 },
+          {  "id": 9, "name": "Beyti", "price": 100 }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Tatlılar",
+        "products": [
+          {  "id": 10, "name": "Triliçe", "price": 50 },
+          {  "id": 11, "name": "Tulumba", "price": 50 },
+          {  "id": 12, "name": "Baklava", "price": 100 }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "İçecekler",
+        "products": [
+          {  "id": 13, "name": "Su", "price": 30 },
+          {  "id": 14, "name": "Ayran", "price": 50 },
+          {  "id": 15, "name": "Kola", "price": 70 }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Pizzalar",
+        "products": [
+          {  "id": 16, "name": "Margarita", "price": 100 },
+          {  "id": 17, "name": "Sucuklu", "price": 150 },
+          {  "id": 18, "name": "Karışık", "price": 200 }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,12 @@
+<ul *ngIf="selectedCategory" class="product-cards">
+      <li class="product-card" *ngFor="let product of selectedCategory.products">
+          <div class="product-info">
+              <div class="product-price">{{ product.price }} ₺</div>
+              <div class="product-name">{{ product.name }}</div>
+          </div>
+          <div class="product-actions">
+              <button class="action-button-add" (click)="addToBasket(product)">+</button>
+              <button class="action-button-remove" (click)="removeFromBasket(product)">-</button>
+          </div>
+        </li>
+</ul>
